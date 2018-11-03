@@ -1,0 +1,30 @@
+<?xml version='1.0' encoding='utf-8'?>
+<!DOCTYPE hibernate-configuration PUBLIC
+        "-//Hibernate/Hibernate Configuration DTD//EN"
+        "http://www.hibernate.org/dtd/hibernate-configuration-3.0.dtd">
+<hibernate-configuration>
+    <session-factory>
+        <property name="connection.url">jdbc:mysql://localhost:3306/lab_6?serverTimezone=UTC</property>
+        <!--?serverTimezone=UTC-->
+        <property name="connection.driver_class">com.mysql.jdbc.Driver</property>
+        <property name="connection.username">root</property>
+        <property name="connection.password">root</property>
+        <!--<mapping class="com.kopach.GroupOfStudentEntity"/>-->
+        <!--<mapping resource="com/kopach/GroupOfStudentEntity.hbm.xml"/>-->
+        <!--<mapping class="com.kopach.LecturerEntity"/>-->
+        <!--<mapping resource="com/kopach/LecturerEntity.hbm.xml"/>-->
+        <!--<mapping resource="com/kopach/StudentEntity.hbm.xml"/>-->
+        <!--<mapping class="com.kopach.StudentEntity"/>-->
+        <!--<mapping class="com.kopach.StudentAndLecturerEntity"/>-->
+        <!--<mapping resource="com/kopach/StudentAndLecturerEntity.hbm.xml"/>-->
+        <!-- <property name="connection.username"/> -->
+        <!-- <property name="connection.password"/> -->
+
+        <mapping class="com.kopach.LecturerEntity"/>
+        <mapping class="com.kopach.GroupOfStudentEntity"/>
+        <mapping class="com.kopach.StudentEntity"/>
+
+        <!-- DB schema will be updated if needed -->
+        <!-- <property name="hbm2ddl.auto">update</property> -->
+    </session-factory>
+</hibernate-configuration>
